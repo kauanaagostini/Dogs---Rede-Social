@@ -4,20 +4,26 @@ const types = {
   email: {
     regex: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: 'Preencha um e-mail valido'
+  },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    message: 'Senha Fraca. A senha precisa ter no mínimo 8 caracteres. Sendo 1 caractere maíusculo, 1 minúsculo e 1 digito.'
   }
 }
 
 const useForm = (type) => {
   const [value, setValue] = React.useState('')
   const [error, setError] = React.useState(null)
+  console.log(type)
 
 
-  function validate(type) {
+  function validate(value) {
     if(type === false) return true
     if(value.length === 0) {
       setError('Preencha um valor')
       return false
     } else if(types[type] && !types[type].regex.test(value)) {
+
       setError(types[type].message)
       return false
     } else {
