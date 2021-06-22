@@ -43,7 +43,7 @@ export const UserStorage = ({children}) => {
       setError(err.message)
       setLogin(false)
     } finally {
-      setLogin(false)
+      setLoading(false)
     }
   }
 
@@ -63,6 +63,8 @@ export const UserStorage = ({children}) => {
         } finally {
           setLoading(false)
         }
+      } else {
+        setLogin(false)
       }
     }
     autoLogin()
