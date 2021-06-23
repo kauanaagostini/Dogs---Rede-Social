@@ -9,11 +9,11 @@ const PhotoContent = ({data}) => {
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={photo.source} alt={photo.title}/>
+        <img src={photo.src} alt={photo.title}/>
       </div>
       <div className={styles.details}>
         <div>
-          <p>
+          <p className={styles.author}>
             <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
@@ -21,12 +21,12 @@ const PhotoContent = ({data}) => {
             <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
           <ul className={styles.attributes}>
-            <li>{photo.peso}</li>
+            <li>{photo.peso} kg</li>
             <li>{photo.idade > 1 ? `${photo.idade} anos` : `${photo.idade} ano`}</li>
           </ul>
         </div>
       </div>
-      <PhotoComments id={photo.id} comments={photo.comments}/>
+      <PhotoComments id={photo.id} comments={comments}/>
     </div>
   )
 }
