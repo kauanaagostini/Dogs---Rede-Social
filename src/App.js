@@ -10,6 +10,7 @@ import { UserStorage } from './Context/UserContext'
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
 import Photo from './Components/Photo/Photo'
 import UserProfile from './Components/User/UserProfile'
+import Page404 from './Components/Page404/Page404'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <ProtectedRoute path="conta/*" element={<User />}/>
             <Route path="foto/:id" element={<Photo />}/>
             <Route path="perfil/:user" element={<UserProfile />}/>
+            <Route path="*" element={<Page404 />}/>
           </Routes>
           <Footer />
         </UserStorage>
