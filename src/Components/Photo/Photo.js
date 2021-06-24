@@ -13,10 +13,8 @@ const Photo = () => {
   React.useEffect(() => {
     const { url, options } = PHOTO_GET(id)
     request( url, options )
-    console.log(url, options)
   },[id, request])
   
-  console.log(data)
   if(error) return <Error error={error} />
   if(loading) return <Loading />
   if(data)
