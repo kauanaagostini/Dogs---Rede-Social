@@ -16,9 +16,9 @@ const UserPhotoPost = () => {
   const {data, error, loading, request } = useFetch()
   const navigate = useNavigate()
 
-  React.useEffect(() => {
-    if(data) navigate('/conta');
-  },[data, navigate])
+  // React.useEffect(() => {
+  //   if(data) navigate('/conta');
+  // },[data, navigate])
 
   function handleSubmit(e) {
     e.preventDefault()
