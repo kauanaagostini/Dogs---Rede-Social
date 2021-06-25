@@ -14,7 +14,7 @@ const LoginForm = () => {
 
   const {userLogin, error, loading} = React.useContext(UserContext)
 
-  async function handleLogin(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     if(username.validate() && password.validate()) {
       userLogin(username.value, password.value)
@@ -24,7 +24,7 @@ const LoginForm = () => {
   return (
     <section className="animeLeft">
       <h1 className="title">Login</h1>
-      <form className={styles.form} onSubmit={handleLogin}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username}/>
         <Input label="Senha" type="password" name="password" {...password}/>
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
