@@ -14,22 +14,24 @@ import Page404 from './Components/Page404/Page404'
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="login/*" element={<Login />}/>
-            <ProtectedRoute path="conta/*" element={<User />}/>
-            <Route path="foto/:id" element={<Photo />}/>
-            <Route path="perfil/:user" element={<UserProfile />}/>
-            <Route path="*" element={<Page404 />}/>
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="login/*" element={<Login />}/>
+              <ProtectedRoute path="conta/*" element={<User />}/>
+              <Route path="foto/:id" element={<Photo />}/>
+              <Route path="perfil/:user" element={<UserProfile />}/>
+              <Route path="*" element={<Page404 />}/>
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 
