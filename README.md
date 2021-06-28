@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img src="./src/Assets/dogs.svg"> | Dogs
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
 
-## Available Scripts
+- [1. Introdução](#1-introdução)
+- [2. Dogs](#2-dogs)
+- [3. Estrutura e funcionalidades](#3-estrutura-e-funcionalidades)
+- [4. Ferramentas Utilizadas](#4-ferramentas-utilizadas)
+- [5. Considerações Finais](#5-considerações-finais)
+ ---
+<br>
 
-In the project directory, you can run:
+## 1. Introdução
+Aplicação Web desenvolvida durante o curso de React completo da <strong>[Origamid](https://www.origamid.com/)</strong>.
 
-### `npm start`
+---
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 2. Dogs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O projeto consiste em desenvolver uma rede social para cachorros, colocando em prática tudo que foi aprendido durante o curso de <strong>[React Completo](https://www.origamid.com/curso/react-completo/)</strong>.
 
-### `npm test`
+<div align="center">
+  <img src="./src/Assets/readme/feed-gif.gif" width="500px"/>
+</div>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A API utilizada nesse projeto é a API desenvolvida pelo curso <strong>[WordPress REST API Dogs](https://www.origamid.com/curso/wordpress-rest-api-dogs/)</strong>.
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Como desenvolvimento de uma rede social, foi criada uma página de Login:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+  <img src="./src/Assets/readme/visualizar-foto-gif.gif" width="500px"/>
+</div>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Onde após logado o usuário é redirecionado para a página <strong>Minha Conta</strong>, onde consta todas as suas postagens.
+Uma vez logado o usuário tem acesso ao menu de navegação que pode levá-lo a postagem de novas fotos:
 
-### `npm run eject`
+<div align="center">
+  <img src="./src/Assets/readme/postar-gif.gif" width="500px"/>
+</div>
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Possui também acesso a área de estatísticas, onde através da biblioteca <strong>`Victory`</strong>, foi possível desenvolver gráficos para visualizar os acessos da página e de cada foto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<div align="center">
+  <img src="./src/Assets/readme/estatisticas-gif.gif" width="500px"/>
+</div>
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+O usuário logado, poderá também comentar nas postagens dos demais usuários:
 
-## Learn More
+<div align="center">
+  <img src="./src/Assets/readme/cometario-gif.gif" width="500px"/>
+</div>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Além da página de login foi desenvolvida a página de cadastro, ondem o usuário pode estar se cadastrando somente com um nome de usuário, e-mail e senha.
+Esses campos possuem validação em tempo real para campo vazio, e-mail válido e senha forte.
 
-### Code Splitting
+<div align="center">
+  <img src="./src/Assets/readme/cadastro-gif.gif" width="500px"/>
+</div>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+E para uma melhor experiência de usuário, foi desenvolvido uma página onde caso ele esqueça a senha que foi cadastrada no site, ele possa fazer a recuperação dela. A senha pode ser recuperada através do e-mail ou do nome do usuário.
 
-### Analyzing the Bundle Size
+<div align="center">
+  <img src="./src/Assets/readme/perdeu-senha-gif.gif" width="500px"/>
+  <img src="./src/Assets/readme/perdeu-senha-2-gif.gif" width="500px"/>
+</div>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Essa é uma aplicação bem completa, foi desenvolvido Hooks específicos para determinadas chamadas, além de Rotas privadas, animações com SVG, `useContext`, e tudo isso é explicado no curso.
 
-### Making a Progressive Web App
+---
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 4. Ferramentas Utilizadas
 
-### Advanced Configuration
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [x] ReactJS
+- [x] React Router Dom
+- [x] JavaScript
+- [x] CSS
+- [x] Victory
 
-### Deployment
+---
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 5. Considerações Finais
 
-### `npm run build` fails to minify
+Gostou da rede social, e deseja interagir com ela?
+A Origamid fez o deploy do projeto para quem quiser interagir com a aplicação. Acesse:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://dogs.origamid.dev/">
+        <img src="./src/Assets/login.jpg" width="150px" style="border-radius: 50%"/>
+      </a>
+    </td>
+    <td align="justify">
+      Login: <strong>dog</strong>
+      <br>
+      Senha: <strong>dog</strong>
+    </td>
+  </tr>
+</table>
+
+<strong>Lembrando:</strong> a cada 10 minutos é restaurado os dados originais da aplicação, apagando postagens, comentários, etc.
+
+Obrigada ao professor <strong>André Rafael</strong> pelo maravilhoso curso, e pela didática.
+
+---
+<div align="center">
+  <a href="https://github.com/kauanaagostini"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71272642?s=460&u=16e95ea294359879e6e99ad563f7e102f0823246&v=4" width="100px;" alt=""/><br /><sub><b>Kauana Maria Agostini</b></sub></a>
+</div>
